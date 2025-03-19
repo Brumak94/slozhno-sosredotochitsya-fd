@@ -1,5 +1,225 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-image: var( --header-bg-image-url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  margin-block-end: var(--margin-bot-low);
+  padding: var(--padding-frame);
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-inline-start: 1px solid var(--color-title);
+  border-block-end: 1px solid var(--color-title);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-inline-end: 1px solid var(--color-title);
+  border-block-start: 1px solid var(--color-title);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-el {
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  color: var(--color-title);
+  font-weight: 400;
+  line-height: 139%;
+  text-align: center;
+}
+
+.decorated-el::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: -19px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--color-title);
+  background-color: var(--color-title);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.header__theme-menu {
+  grid-row: 1 / 2;
+  justify-self: end;
+  align-self: center;
+  margin-block-start: 75px;
+  margin-block-end: 65px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  border: currentColor;
+  padding: 0px 13px;
+  color: var(--color-title);
+  text-transform: lowercase;
+  background: transparent;
+}
+
+.header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--color-title);
+  outline: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--color-title);
+  pointer-events: none;
+}
+
+.header__title {
+  grid-row: 2 / 3;
+  justify-self: start;;
+  align-self: center;
+  color: var(--accent-color-title);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 4px 4px 0 var(--color-title);
+}
+
+.header__text {
+  grid-row: 3 / 4;
+  justify-self: end;
+  align-self: center;
+  margin-block-start: 55px;
+  margin-block-end: 66px;
+  font-weight: 700;
+  font-size: var(--main-font-size);
+  line-height: 130%;
+  inline-size: 355px;
+}
+
+.title-decor {
+  color: var(--color-subtitle);
+  background-color: var(--bg-text-color);
+}
+
+.content__section {
+  display: grid;
+  gap: 20px;
+  padding: var(--padding-frame);
+  margin-block-end: var(--margin-bot-high);
+}
+
+.section__title {
+  color: var(--color-title);
+  font-weight: 700;
+  font-size: var(--main-font-size);
+  line-height: 130%;
+}
+
+.section__subtitle {
+  font-size: var(--main-font-size);
+  margin-block-end: 10px;
+}
+
+.section__text {
+  color: var(--color-text);
+}
+
+.section__pictures {
+  padding: var(--padding-frame);
+  margin-block-end: var(--margin-bot-low);
+}
+
+.section__text-link {
+  text-decoration: none;
+  color: var(--color-text);
+  text-shadow: 2px 1px var(--color-title);
+}
+
+.section__text-link:hover {
+  text-decoration: underline;
+}
+
+.section__text-link:focus {
+  outline: none;
+  border: 1px solid var(--color-text);
+}
+
+.section__pictures-list {
+  display: grid;
+  gap: 10px;
+  inline-size: 100%;
+}
+
+.section__pictures-list img {
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  min-inline-size: 375px;
+  min-block-size: 668px;
+
+}
+
+.footer::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-inline-start: 1px solid var(--color-title);
+  border-block-end: 1px solid var(--color-title);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-inline-end: 1px solid var(--color-title);
+  border-block-start: 1px solid var(--color-title);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 73%;
+  color: var(--accent-color-title);
+  text-shadow: 2px 2px var(--color-title);
+  align-self: center;
+  justify-self: center;
 }
