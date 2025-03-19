@@ -17,3 +17,11 @@
   --margin-bot-high: 50px;
 }
 
+
+@media (min-width: 768px) {
+  :root {
+    --padding-frame: 0 20px;
+    --margin-bot-low: 60px;
+    --margin-bot-high: 80px;
+  }
+}
