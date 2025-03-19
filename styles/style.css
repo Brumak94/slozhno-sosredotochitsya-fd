@@ -122,7 +122,7 @@
   font-weight: 700;
   font-size: var(--main-font-size);
   line-height: 130%;
-  inline-size: 355px;
+  max-inline-size: 491px;
 }
 
 .title-decor {
