@@ -4,22 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
     <script src="./scripts/script.js"></script>
-    <link rel="icon" href="./images/favicon.ico" sizes="any" />
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
-    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
+    <script src="./scripts/script.js"></script>
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <span class="decorated-el">REC</span>
+      <span class="header__rec" aria-hidden="true"></span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -65,7 +66,7 @@
           концентрироваться даже на двух делах одновременно. А когда в поле
           внимания попадает несколько важных задач, организм паникует и выделяет
           кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем
-          невнимательно: ошибаемся и быстро устаём. выяснили
+          невнимательно: ошибаемся и быстро устаём.
         </p>
       </article>
       <article>
@@ -82,7 +83,7 @@
         </p>
       </article>
     </section>
-    <section class="section__attention content__section">
+    <section class="content__section section__attention">
       <h2 class="section__title">Что снижает концентрацию внимания?</h2>
       <article>
         <h3 class="section__subtitle title-decor">Многозадачность</h3>
@@ -125,7 +126,7 @@
         секунд)
       </h2>
       <article>
-        <h3 class="section__subtitle title-decor">
+        <h3 class="section__subtitle subtitle-margin-ignore title-decor">
           5 простых (на самом деле не очень) советов
         </h3>
       </article>
@@ -197,14 +198,24 @@
           loading="lazy"
           alt="Шарики мороженного в тарелке смотрят в экран с эмоциями"
         />
-        <img class="picture-tape" src="./images/tape.png" loading="lazy" alt="Пленочная кассета" />
+        <img
+          class="picture-tape"
+          src="./images/tape.png"
+          loading="lazy"
+          alt="Пленочная кассета"
+        />
         <img
           class="picture-books"
           src="./images/books.png"
           loading="lazy"
           alt="Стопка книг и стоящая сверху них чашка"
         />
-        <img class="picture-street" src="./images/street.png" loading="lazy" alt="Вечерняя улица" />
+        <img
+          class="picture-street"
+          src="./images/street.png"
+          loading="lazy"
+          alt="Вечерняя улица"
+        />
       </picture>
     </section>
     <footer class="footer">
