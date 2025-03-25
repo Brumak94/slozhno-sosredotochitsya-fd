@@ -13,6 +13,8 @@
   --header-color-title: #FF0070;
   --footer-color-title: #FF0070;
   --accent-color-title: #DB00FF;
+  --link-text-color: #F1B2CE;
+  --link-shadow-color: #FF0070;
   --bg-color: #000028;
   --header-bg-image-url: url(/images/cover-image-dark.png);
   --header-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
