@@ -1,10 +1,10 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  padding: 10px;
-  font-family: var(--main-font);
+  padding: var(--main-gap);
+  font-family: var(--main-font, monospace);
   font-size: var(--main-font-size);
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #000028);
   background-image: var( --header-bg-image-url);
   background-repeat: no-repeat;
   background-position: center;
@@ -20,7 +20,7 @@
   justify-items: end;
   align-items: center;
   margin-block-end: var(--margin-bot);
-  min-block-size: calc(668px - (2*var(--main-gap)));
+  min-block-size: calc(100vh - (2*var(--main-gap)));
 }
 
 .decorated-zone {
@@ -91,6 +91,7 @@
   color: var(--color-title);
   text-transform: lowercase;
   background: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
@@ -160,6 +161,10 @@
   line-height: 130%;
 }
 
+.section__text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .section__pictures {
   margin-block-end: var(--margin-bot);
 }
@@ -196,8 +201,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  min-block-size: calc(668px - var(--main-gap));
-
+  min-block-size: calc(100vh - (2*var(--main-gap)));
 }
 
 .footer::before {
@@ -233,13 +237,9 @@
 }
 
 @media (width >= 768px) {
-  .page {
-    padding: 20px;
-  }
-
-  .header {
+  /* .header {
     min-block-size: calc(1024px - 40px);
-  }
+  } */
 
   .header__title {
     position: relative;
@@ -314,9 +314,9 @@
 }
 
 @media (width >= 1024px) {
-  .header {
+  /* .header {
     min-block-size: calc(768px - 40px);
-  }
+  } */
 
   .header__theme-menu {
     justify-self: center;
@@ -333,15 +333,11 @@
 
   .section__title {
     max-inline-size: 315px;
+    grid-column: 1 / -1;
   }
 
   .section__attention {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: min-content 1fr;
-  }
-
-  .section__attention article {
-    grid-row: 2;
   }
 
   .footer {
